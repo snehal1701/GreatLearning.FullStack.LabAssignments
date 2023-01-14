@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/demo.css}">
+</head>
+<body>
+	<p th:text="'Today date on the server is '+${serverDate}" class="funny"></p>
+	<hr>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="p:${players}">
+				<td th:text="${p}">
+			</tr>
+		</tbody>
+	</table>
+	<hr>
+
+
+</body>
+</html>
